@@ -71,7 +71,7 @@ public class CentralPacientes {
      *            pac!=null y no existe un paciente con c�digo igual a pac.codigo
      */
     public void agregarPacienteAlComienzo(Paciente pac) {
-        // TODO: Realiar el m�todo que agrega al principio
+        // DONE: Realiar el m�todo que agrega al principio
     	pacientes.add(0, pac);
     }
 
@@ -82,7 +82,7 @@ public class CentralPacientes {
      *            pac!=null y no existe un paciente con c�digo igual a pac.codigo
      */
     public void agregarPacienteAlFinal(Paciente pac) {
-        // TODO: Agragar un paciente al final de la lista
+        // DONE: Agregar un paciente al final de la lista
     	//if (pac!=null) {
 			pacientes.add(pac);
 		//}
@@ -92,7 +92,7 @@ public class CentralPacientes {
      * Adiciona un paciente a la lista de pacientes antes del paciente con el c�digo especificado. <br>
      */
     public void agregarPacienteAntesDe(int cod, Paciente pac) throws NoExisteException {
-        // TODO: Agrega un paciente despu�s del paciente con el c�digo dado
+        // DONE: Agrega un paciente despu�s del paciente con el c�digo dado
     	Paciente pacienteCodigo = localizar(cod);
     	if (pacienteCodigo != null) {
     		int indicePaciente = pacientes.indexOf(pacienteCodigo);
@@ -106,7 +106,7 @@ public class CentralPacientes {
      * Adiciona un paciente a la lista de pacientes despu�s del paciente con el c�digo especificado.
      */
     public void agregarPacienteDespuesDe(int cod, Paciente pac) throws NoExisteException {
-        // TODO: Agrega un paciente despu�s del paciente con el c�digo cod
+        // DONE: Agrega un paciente despu�s del paciente con el c�digo cod
     	Paciente pacienteCodigo = localizar(cod);
     	if (pacienteCodigo != null) {
     		int indicePaciente = pacientes.indexOf(pacienteCodigo);
@@ -120,7 +120,7 @@ public class CentralPacientes {
      * Busca el paciente con el c�digo dado en la lista de pacientes.
      */
     public Paciente localizar(int codigo) {
-        // TODO: Completar el m�todo
+        // DONE: Completar el m�todo
     	for (Paciente paciente : pacientes) {
     		if (paciente.darCodigo() == codigo) {
 				return paciente;
@@ -133,7 +133,7 @@ public class CentralPacientes {
      * Elimina el paciente con el c�digo especificado.
      */
     public void eliminarPaciente(int cod) throws NoExisteException {
-        // TODO: Si no existe el paciente con el c�digo dado, genera la excepci�n
+        // DONE: Si no existe el paciente con el c�digo dado, genera la excepci�n
     	Paciente pacienteCodigo = localizar(cod);
      	if (pacienteCodigo != null && darNumeroPacientes() !=0) {
      		pacientes.remove(pacientes.indexOf(pacienteCodigo));
@@ -172,7 +172,7 @@ public class CentralPacientes {
      * Retorna la cantidad de hombres que hay en la lista
      */
     public int cantHombres() {
-        // TODO: Completar
+        // DONE: Completar
     	int cantidadHombres = 0;
     	for (Paciente paciente : pacientes) {
     		if (paciente.darSexo() == 1) {
@@ -186,7 +186,7 @@ public class CentralPacientes {
      * Retorna la cantidad de mujeres que hay en la lista
      */
     public int cantMujeres() {
-        // TODO: Completar
+        // DONE: Completar
     	int cantidadMujeres = 0;
     	for (Paciente paciente : pacientes) {
 			if (paciente.darSexo() == 2) {
@@ -203,7 +203,7 @@ public class CentralPacientes {
 	 * @return nombre de la cl�nica
 	 */
 	public String metodo4() {
-		// TODO: Completar
+		// DONE: Completar
 		int numeroPaciente = 0;
 		String clinicaMasOcupada = "";
 
